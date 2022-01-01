@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Sentiment Analysis</title>
+</head>
+<body>
+    <h3>Twitter Sentiment Analysis</h3>
+    <hr/>
+	{% if data.positive_count < 1 %}
+		<li>Postive 0 </li>
+	{% else %}
+		<li>Postive {{ data.positive_count }}</li>
+	{% endif %}
+	{% if data.Negative_count < 1 %}
+		<li>Negative 0 </li>
+	{% else %}
+		<li>Negative {{ data.Negative_count }}</li>
+	{% endif %}
+	{% if data.Neutal_count < 1 %}
+		<li>Neutral 0 </li>
+	{% else %}
+		<li>Neutral {{ data.Neutal_count }}</li>
+	{% endif %}
+	
+	
+	
+
+    <img src="{% static "C:\Users\Ayushi Tripathi\Desktop\django\DeloitteTask\SentimentAnalysis\static\chart.png" %}" />
+	<br>
+	<br><br>
+	<br>
+	<br>
+	<br></br>
+	
+</body>
+</html>
